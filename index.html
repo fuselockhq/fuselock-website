@@ -4,90 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
-    <title>Fuselock - Security Tool for Developers</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #121212;
-        }
-        .container {
-            background-color: #1e1e1e;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-            animation: fadeIn 3s ease-out;
-            color: #ffffff;
-        }
-        p {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 260px;
-            margin: 0 auto;
-            padding: 15px 30px;
-            background-color: #cb3837;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button.github {
-            background-color: #2b3137;
-        }
-        .cta-button.github:hover {
-            background-color: #24292e;
-        }
-        .cta-button:hover {
-            background-color: #a72b2a;
-        }
-        .npm-icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        h2 {
-            text-align: center;
-        }
-    </style>
+    <title>fuselock - Security Tool for Developers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <div class="header-container">
+        <div class="header">
+            <a href="#" class="nav-button">HOME</a>
+            <a href="#" class="nav-button">FEATURES</a>
+            <a href="blogs.html" class="nav-button">BLOG</a>
+            <a href="https://github.com/fuselockhq" class="nav-button" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        </div>
+    </div>
+
     <div class="container">
-        <h2>Eleminate all of your security blindspots with </h2>
-        <h1>FuseLock</h1>
-        <p>FuseLock secures your application against vulnerabilities even before they are discovered. We help to protect you from all the latest CVE's.</p>
+        <div class="title-container">
+            <h2>Eleminate all of your security blindspots with</h2>
+            <h1>fuselock</h1>
+            <p>fuseLock secures your application against vulnerabilities even before they are discovered. We help to protect you from all the latest CVE's.</p>
+        </div>
         <div style="background-color: #2d2d2d; border-radius: 6px; padding: 16px; margin: 20px auto; max-width: 400px; display: flex; justify-content: space-between; align-items: center; margin-top: 60px">
             <code style="font-family: 'Courier New', monospace; font-size: 1.1em;">
                 <span style="color: #bbbbbb;">~</span>
                 <span style="color: #61afef;">npm</span>
                 <span style="color: #98c379;">install</span>
-                <span style="color: #e06c75;">fuselock</span>
+                <span style="color: #cb3837;">fuselock</span>
             </code>
             <button onclick="copyCommand()" style="background: none; border: none; cursor: pointer; padding: 4px;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#e0e0e0">

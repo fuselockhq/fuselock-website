@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+    <title>Understanding CVEs - Fuselock Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <a href="../index.html" class="nav-button">HOME</a>
+            <a href="#" class="nav-button">FEATURES</a>
+            <a href="../blogs.html" class="nav-button">BLOG</a>
+            <a href="https://github.com/fuselockhq" class="nav-button" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <article class="blog-content">
+            <header class="blog-header">
+                <h1 class="blog-title">Understanding CVEs and Their Impact on Application Security</h1>
+                <div class="blog-meta">Published on March 15, 2024 • 5 min read</div>
+            </header>
+
+            <p>Common Vulnerabilities and Exposures (CVEs) are a fundamental concept in cybersecurity. In this post, we'll explore what they are and why they matter for your applications.</p>
+
+            <h2>What is a CVE?</h2>
+            <p>A CVE is a unique identifier assigned to a specific security vulnerability. For example, <code>CVE-2021-44228</code> refers to the Log4Shell vulnerability that affected millions of Java applications.</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+            </div>
+
+            <h2>Example of a Vulnerable Code</h2>
+            <p>Here's an example of a vulnerable Node.js code that might lead to a CVE:</p>
+
+            <pre><code class="language-javascript">const express = require('express');
+const app = express();
+
+app.get('/user', (req, res) => {
+    // Vulnerable code: Direct use of user input in SQL query
+    const query = `SELECT * FROM users WHERE id = ${req.query.id}`;
+    db.execute(query);  // SQL Injection vulnerability
+});</code></pre>
+
+            <p>The secure version would use parameterized queries:</p>
+
+            <pre><code class="language-javascript">app.get('/user', (req, res) => {
+    // Secure code: Using parameterized query
+    const query = 'SELECT * FROM users WHERE id = ?';
+    db.execute(query, [req.query.id]);
+});</code></pre>
+
+            <h2>Impact of CVEs</h2>
+            <img src="https://www.researchgate.net/profile/Andrew-Moore-27/publication/342105186/figure/fig2/AS:901227181260801@1591880712611/CVE-Vulnerability-Processing-Lifecycle.png    " alt="CVE Impact Diagram" class="blog-image">
+            <div class="image-caption">Figure 1: The potential impact chain of a CVE</div>
+
+            <blockquote>
+                "Security is not just about fixing vulnerabilities; it's about understanding and preventing them before they occur." - Security Expert
+            </blockquote>
+
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li>Always keep your dependencies updated</li>
+                <li>Regularly check for new CVEs affecting your stack</li>
+                <li>Implement security scanning in your CI/CD pipeline</li>
+                <li>Use tools like FuseLock to automate security checks</li>
+            </ul>
+        </article>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+</body>
+</html> 

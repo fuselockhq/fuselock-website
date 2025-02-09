@@ -1,0 +1,271 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding: 20px;
+    background-color: #121212;
+}
+
+.header-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.nav-button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.1em;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    color: #ffffff;
+}
+
+.container {
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog specific styles */
+.blog-post {
+    border-bottom: 1px solid #333;
+    padding: 20px 0;
+    transition: transform 0.2s ease;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-post:hover {
+    transform: translateX(10px);
+}
+
+.blog-title {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.blog-title h2 {
+    margin: 0;
+    text-align: left;
+}
+
+.blog-meta {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt {
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #cb3837;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #a72b2a;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Blog post content specific styles */
+.blog-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.blog-content p {
+    text-align: left;
+}
+
+.blog-content h2,
+.blog-content h3 {
+    text-align: left;
+}
+
+pre {
+    background-color: #2d2d2d;
+    border-radius: 6px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+p code {
+    background-color: #2d2d2d;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.image-caption {
+    text-align: center;
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+blockquote {
+    border-left: 4px solid #cb3837;
+    margin: 20px 0;
+    padding-left: 20px;
+    font-style: italic;
+    color: #cccccc;
+}
+
+/* CTA Buttons */
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #cb3837;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button.github {
+    background-color: #24292e;
+}
+
+.cta-button:hover {
+    background-color: #a72b2a;
+}
+
+.cta-button.github:hover {
+    background-color: #1b1f23;
+}
+
+/* NPM and GitHub Icons */
+.npm-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Button container */
+.cta-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title animation styles */
+.title-container {
+    text-align: center;
+}
+
+.title-container h2 {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.title-container h1 {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    font-family: 'Fira Code', monospace;
+    color: #cb3837;
+    font-size: 3em;
+    letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(209, 51, 51, 0.3);
+}
+
+/* Remove animation from paragraph */
+.title-container p {
+    text-align: center;
+} 
