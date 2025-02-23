@@ -1,0 +1,25 @@
+krism:
+  name: Kris Muhi
+  title: Product @ Fuselock
+  url: https://www.linkedin.com/in/kmuhi/
+  image_url: "https://pbs.twimg.com/profile_images/1788861306721710080/SdP5f_2Y_400x400.jpg"
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-kris'
+  socials:
+    x: muhikris
+    github: krismuhi
+    linkedin: kmuhi
+
+gilm:
+  name: Gil megidish
+  title: hacker, engineer @ Fuselock
+  url: https://github.com/gmegidish
+  image_url: https://avatars.githubusercontent.com/u/2457607
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-gil'
+  socials:
+    x: gilmegidish
+    linkedin: gilmegidish
+    github: gmegidish
